@@ -1,0 +1,592 @@
+/*!
+ *
+ * Angle - Bootstrap Admin App + AngularJS
+ *
+ * Version: 3.0.0
+ * Author: @themicon_co
+ * Website: http://themicon.co
+ * License: https://wrapbootstrap.com/help/licenses
+ *
+ */
+
+
+/* [Table of contents]
+
+1. Bootstrap reset
+  1.1 bootstrap
+  1.2 bootstrap-reset
+
+2. Typography
+  2.1 typo
+
+3. Layout
+  3.1 layout / .wrapper .content-wrapper
+  3.2 top-navbar / .top-navbar
+  3.3 sidebar / .sidebar
+  3.4 offsidebar / .offsidebar
+  3.4 preloader / .preloader
+
+4. Components
+  4.1  button-extra
+  4.2  placeholder / .box-placeholder
+  4.3  panels
+  4.4  progress-extra
+  4.5  radial-bar / .radial-bar
+  4.6  user-block / .user-block
+  4.7  circles / .circle
+  4.8  timeline / .timeline
+  4.9  dropdown-extra
+  4.10 row-extra / .row-table .row-flush
+  4.11 half-float / .half-float
+  4.12 masonry-grid / .row-masonry
+  4.13 widget / .widget
+  4.14 typeahead / .typeahead-ctrl
+  4.15 animate
+  4.16 loading-bar
+  4.17 table-grid
+  4.18 todo / .todo
+  4.19 ngwig
+  4.20 ngDialog
+  4.21 nestable
+  4.22 carousel
+  4.23 masonry-grid-deck
+
+5. Charts
+  5.1 chart-flot / .flot-chart
+
+6. Form elements
+  6.1 form-elements
+  6.2 form-imgcrop
+  6.3 form-validation
+  6.4 form-wizard
+  6.5 form-tags
+  6.6 uiselect
+  6.7 code-editor
+
+7. Tables
+  7.1 datatable
+  7.2 table-extras
+  7.3 table-ngtable
+  7.4 table-ng-grid
+  7.5 angular grid
+
+8. Plugins
+  8.1 plugins
+  8.2 slim-scroll / .slimScrollBar
+  8.3 datepicker / .bootstrap-datetimepicker-widget
+  8.4 alerts / .alerts
+  8.5 notifiy / .notifiy
+  8.6 calendar / .fc-*
+  8.7 spinner / .whirl
+  8.8 gmap / .gmap
+  8.9 vector-map / vector-map
+  8.10 portlets / .portlet
+
+9. Utilities
+  9.1 utils
+
+10. Print CSS
+  10.1 print
+
+11. Settings
+  11.1 settings
+
+12. Documentation
+  12.1 docs
+ */
+
+@import "bootstrap";
+// Override bootstrap variables
+@import "app/variables";
+// Bootstrap
+@import "bootstrap/bootstrap/_mixins";
+// Global definition of media queries
+@import "app/media-queries";
+// Utilities
+@import "app/utils-definitions";
+// Bootstrap reset
+@import "app/bootstrap-reset";
+// Typography
+@import "app/typo";
+// Layout
+@import "app/layout";
+@import "app/layout-extra";
+@import "app/layout-animation";
+@import "app/top-navbar";
+@import "app/sidebar";
+@import "app/offsidebar";
+// Components
+@import "app/preloader";
+@import "app/breadcrumbs";
+@import "app/loading-bar";
+@import "app/animate";
+@import "app/button-extra";
+@import "app/placeholder";
+@import "app/panels";
+@import "app/progress-extra";
+@import "app/radial-bar";
+@import "app/user-block";
+@import "app/circles";
+@import "app/timeline";
+@import "app/dropdown-extra";
+@import "app/row-extra";
+@import "app/half-float";
+@import "app/masonry-grid";
+@import "app/widget";
+@import "app/typeahead";
+@import "app/table-grid";
+@import "app/todo";
+@import "app/ngwig";
+@import "app/ngdialog";
+@import "app/nestable";
+@import "app/carousel";
+@import "app/masonry-grid-deck";
+// Charts
+@import "app/chart-flot";
+// Form elements
+@import "app/form-elements";
+@import "app/form-imgcrop";
+@import "app/form-validation";
+@import "app/form-tags";
+@import "app/form-wizard";
+@import "app/uiselect";
+@import "app/code-editor";
+// Tables
+@import "app/datatable";
+@import "app/table-extras";
+@import "app/table-ngtable";
+@import "app/table-ng-grid";
+@import "app/table-uigrid";
+@import "app/table-angulargrid";
+// Plugins
+@import "app/plugins";
+@import "app/slim-scroll";
+@import "app/datepicker";
+@import "app/alerts";
+@import "app/notify";
+@import "app/calendar";
+@import "app/spinner";
+@import "app/gmap";
+@import "app/vector-map";
+@import "app/portlets";
+// Mailbox
+@import "app/mailbox";
+// Utilities
+@import "app/utils";
+// Print CSS
+@import "app/print";
+// Settings
+@import "app/settings";
+// Documentation
+@import "app/docs";
+//theme-a
+@import "themes/theme-a";
+@import "app/login";
+//loading
+$grayLightest: #f1f3f4 !default;
+$greenMiddle: #61c4be !default;
+$box-border: #dcdcdc !default;
+$blueMiddle: #2097f3 !default;
+$white: #fff !default;
+[kd-loading] {
+    position: relative;
+}
+
+.kd-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    display: none;
+}
+
+.kd-loading:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.kd-loading.kd-loading-active {
+    display: block;
+}
+
+.kd-loading.kd-loading-overlay {
+    background-color: rgba(255, 255, 255, .7);
+    z-index: 4;
+}
+
+.kd-loading > .kd-loading-body {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    >.fa {
+        font-size: 40px;
+        color: #5d9cec;
+    }
+}
+
+.kd-loading > .kd-loading-body > .kd-loading-text {
+    position: relative;
+    left: 0px;
+    font-weight: bold;
+    font-size: 11px;
+    text-shadow: 0 0 2px rgb(255, 255, 255);
+    background: none;
+    width: auto;
+    height: auto;
+    color: #5d9cec;
+}
+
+.search {
+    width: 250px;
+    .input-group-addon {
+        background: #ff6600;
+        color: #fff;
+        border: none;
+    }
+    .input-group-addon:nth-child(2) {
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+    .input-group-addon:nth-child(3) {
+        background: none;
+    }
+}
+
+
+/* ========================================================================
+   Component: valiation
+ ========================================================================== */
+
+.w5c-form input:focus:focus,
+.w5c-form textarea:focus:focus,
+.w5c-form select:focus:focus {
+    border-color: #2196f3;
+    outline: 0;
+    outline: thin dotted \9;
+    @include box-shadow( inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6));
+    color: #000000;
+}
+
+.w5c-form input:focus:focus.error,
+.w5c-form textarea:focus:focus.error,
+.w5c-form select:focus:focus.error {
+    border-color: #b94a48;
+    @include box-shadow(0 0 6px #f8b9b7);
+}
+
+.w5c-form input.error,
+.w5c-form textarea.error,
+.w5c-form select.error {
+    border-color: #b94a48;
+    @include box-shadow( 0 0 6px #f8b9b7);
+}
+
+.w5c-form .dropdown-menu {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.w5c-form .alert {
+    margin-bottom: 0px;
+}
+
+.w5c-form .w5c-error {
+    color: #b94a48;
+    display: block;
+    margin-top: 0px;
+    font-size: 12px;
+}
+
+.w5c-form {
+    fieldset>legend {
+        border: none;
+        // margin: 0px -15px 6px;
+    }
+}
+
+.form-horizontal .form-group {
+    margin-bottom: 20px;
+}
+
+.btn-primarys {
+    color: #1c84c6;
+    background-color: #fff;
+    border-color: #1c84c6;
+    padding: 4px 12px;
+}
+
+.btn-primarys.focus,
+.btn-primarys:focus,
+.btn-primarys:hover,
+.btn-primarys:active {
+    color: #189f84;
+    background-color: #fff;
+    border-color: #1974ad
+}
+
+.btn-successs {
+    color: #1ab394;
+    background-color: #fff;
+    border-color: #1ab394;
+    padding: 4px 12px;
+}
+
+.btn-successs.focus,
+.btn-successs:focus,
+.btn-successs:hover,
+.btn-successs:active {
+    color: #189f84;
+    background-color: #fff;
+    border-color: #189f84
+}
+
+.btn-infos {
+    color: #5d88cf;
+    background-color: #fff;
+    border-color: #dfdfdf;
+    padding: 4px 12px;
+}
+
+.btn-infos.focus,
+.btn-infos:focus,
+.btn-infos:hover,
+.btn-infos:active {
+    color: #5780c2;
+    background-color: #fff;
+    border-color: #d1d1d1;
+}
+
+.btn-warnings {
+    color: #f8ac59;
+    background-color: #fff;
+    border-color: #f8ac59;
+    padding: 4px 12px;
+}
+
+.btn-warnings.focus,
+.btn-warnings:hover,
+.btn-warnings:active,
+.btn-warnings:focus,
+{
+    color: #e9a254;
+    background-color: #fff;
+    border-color: #e9a254;
+}
+
+.btn-danger {
+    background: #ff695a;
+    &:hover,
+    &:active,
+    &:focus {
+        color: #fff;
+        background: #f05050;
+        border-color: #f05050;
+    }
+}
+
+.btn-dangers {
+    color: #e95474;
+    background-color: #fff;
+    border-color: #dfdfdf;
+    padding: 4px 12px;
+}
+
+.btn-dangers.focus,
+.btn-dangers:focus,
+.btn-dangers:hover,
+.btn-dangers:active {
+    color: #db4f6d;
+    background-color: #fff;
+    border-color: #dfdfdf;
+}
+
+.table-uigrid.ui-grid .ui-grid-cell button:first-child {
+    margin: 2px 2px 0 15px;
+}
+
+.table-uigrid.ui-grid .ui-grid-cell button {
+    margin: 2px 2px 0 6px;
+}
+
+
+/* ==========================================================================
+   ui-grid  无数据显示
+   ========================================================================== */
+
+.toast-text {
+    padding: 10px;
+    vertical-align: middle;
+    color: #4b4b4b;
+    position: fixed;
+    z-index: 999999;
+    cursor: pointer;
+    width: 320px;
+    height: 50px;
+    background-repeat: no-repeat;
+    opacity: .9;
+    left: 50%;
+    top: 50%;
+    margin-top: -25px;
+    margin-left: -160px;
+    text-align: center;
+    i.fa {
+        font-size: 24px;
+        position: absolute;
+        left: 20px;
+        top: 15px;
+    }
+    img {
+        display: inline-block;
+    }
+    .toast-msg {
+        position: relative;
+        top: 3px;
+        padding-left: 22px;
+        font-size: 18px;
+        color: $gray;
+    }
+}
+
+.form-group {
+    .select2-drop-active {
+        border-top: 1px;
+    }
+    .select2-container-multi .select2-choices {
+        min-height: 34px;
+        background-image: none;
+        .select2-search-choice {
+            padding: 6px 5px 6px 18px;
+        }
+    }
+    .select2-container {
+        &.select2-dropdown-open .select2-choice {
+            background: $white;
+        }
+        &.select2-dropdown-open {
+            .select2-choice {
+                .select2-arrow {
+                    border-left: 1px solid $greenMiddle;
+                }
+            }
+        }
+        .select2-choice {
+            height: 28px;
+            line-height: 28px;
+            background-image: none;
+            .select2-arrow {
+                background: $grayLightest;
+                width: 40px;
+                background-image: none;
+                border: none;
+                border-left: 1px solid $box-border;
+                b {
+                    background-position: 0px 6px;
+                    width: 12px;
+                    position: relative;
+                    left: 12px;
+                    top: -4px;
+                }
+            }
+        }
+    }
+    .select2-container-active .select2-choice,
+    .select2-container-active .select2-choices {
+        box-shadow: none;
+        -webkit-box-show: none;
+        -moz-box-show: none;
+    }
+}
+
+.form-group .form-control.select2-container.select2-dropdown-open {
+    border-color: $blueMiddle;
+}
+
+.layout-fixed .select2-drop-active {
+    border: 1px solid $blueMiddle;
+}
+
+.layout-fs {
+    .content-wrapper {
+        >div>h3 {
+            margin: 0px;
+        }
+    }
+}
+
+.content-wrapper {
+    .breadcrumb {
+        margin: -25px -25px 20px -20px;
+        background-color: #fafbfc;
+        border-top: 1px solid #cfdbe2;
+        border-bottom: 1px solid #cfdbe2;
+    }
+}
+
+.sidebar > .nav > li > a > em {
+    font-size: 15px;
+    // vertical-align: middle;
+    &.fa-sort-desc {
+        position: relative;
+        top: -2px;
+    }
+}
+
+@-moz-document url-prefix() {
+    .sidebar > .nav > li > a > em {
+        font-size: 15px;
+        // vertical-align: middle;
+        &.fa-sort-desc {
+            position: relative;
+            top: -22px;
+        }
+    }
+}
+
+.aside-collapsed {
+    .sidebar-subnav > li > a {
+        text-align: center;
+    }
+}
+
+.sidebar-subnav.nav-floating,
+.sidebar-subnav.nav-floating .collapse {
+    height: auto !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+.aside-collapsed .sidebar > .nav .nav,
+.aside-collapsed .sidebar > .nav > .nav-heading,
+.aside-collapsed .sidebar > .nav > li > a > span,
+.aside-collapsed .sidebar > .nav > li > a > em.collapse {
+    display: none !important;
+    .fa {
+        display: none;
+        height: 0px;
+        position: relative;
+        left: 999999999999999px;
+    }
+}
+
+.contentModalSearch {
+    margin: -20px -20px 10px;
+    .panel {
+        background: #f6f6f6;
+        border: none;
+        margin: 0px;
+        .panel-body {
+            padding-top: 20px;
+            padding-bottom: 0px;
+            .form-group{
+              .searchBtn{
+                 padding:0;
+                 padding:0;
+              }
+            }
+        }
+    }
+}

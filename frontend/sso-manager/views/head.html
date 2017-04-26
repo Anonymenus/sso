@@ -1,0 +1,154 @@
+<!--  START Top Navbar-->
+<nav role="navigation" class="navbar topnavbar">
+   <!-- START navbar header-->
+   <div class="navbar-header">
+      <a href="#/" class="navbar-brand">
+         <div class="brand-logo">
+            <img src="{{ show_user_company_logo ? user_company_logo : 'images/logo.png'}} " alt="App Logo" class="img-responsive" />
+         </div>
+         <div class="brand-logo-collapsed">
+            <img src="{{ show_user_company_logo ? user_single_company_logo : 'images/logo-single.png'}}" alt="App Logo" class="img-responsive" />
+         </div>
+      </a>
+   </div>
+   <!-- END navbar header-->
+   <!-- START Nav wrapper-->
+   <div class="nav-wrapper">
+      <!-- START Left navbar-->
+      <ul class="nav navbar-nav">
+         <li>
+            <!-- Button used to collapse the left sidebar. Only visible on tablet and desktops-->
+            <a href="" trigger-resize="" ng-click="app.layout.isCollapsed = !app.layout.isCollapsed" class="hidden-xs">
+              <em class="fa {{app.layout.isCollapsed ? 'fa-indent' : 'fa-dedent'}} fa-fw fa-lg"></em>
+            </a>
+            <!-- Button to show/hide the sidebar on mobile. Visible on mobile only.-->
+            <a href="" ng-click="app.asideToggled = !app.asideToggled" class="visible-xs sidebar-toggle">
+               <em class="fa fa-navicon"></em>
+            </a>
+         </li>
+
+       <!--   <li>
+            <a href="" ng-click="toggleUserBlock()">
+               <em class="fa fa-user"></em>
+            </a>
+         </li>
+
+         <li>
+            <a href="login.html" title="Lock screen">
+               <em class="fa fa-lock"></em>
+            </a>
+         </li> -->
+
+      </ul>
+      <!-- END Left navbar-->
+      <!-- START Right Navbar-->
+      <ul class="nav navbar-nav navbar-right">
+
+
+
+         <li ng-if="!show_user_company_logo"><a target="_blank" href="http://www.lngtop.com/">公司官网</a></li>
+         <li ng-if="!show_user_company_logo"><a target="_blank" href="http://www.lngmall.com">淘气网</a></li>
+
+         <li dropdown="" class="dropdown dropdown-list">
+           <!--  <a dropdown-toggle="">
+               <em class="fa fa-lg  fa-bell"></em>
+               <div class="label label-danger">4</div>
+            </a> -->
+
+           <!--  <ul class="dropdown-menu animated flipInX">
+               <li>
+                  <div class="list-group">
+
+                     <a href="" class="list-group-item">
+                        <div class="media-box">
+                           <div class="pull-left">
+                              <em class="fa fa-twitter fa-2x text-info"></em>
+                           </div>
+                           <div class="media-box-body clearfix">
+                              <p class="m0">New followers</p>
+                              <p class="m0 text-muted">
+                                 <small>1 new follower</small>
+                              </p>
+                           </div>
+                        </div>
+                     </a>
+
+                     <a href="" class="list-group-item">
+                        <div class="media-box">
+                           <div class="pull-left">
+                              <em class="fa fa-envelope fa-2x text-warning"></em>
+                           </div>
+                           <div class="media-box-body clearfix">
+                              <p class="m0">New e-mails</p>
+                              <p class="m0 text-muted">
+                                 <small>You have 10 new emails</small>
+                              </p>
+                           </div>
+                        </div>
+                     </a>
+
+                     <a href="" class="list-group-item">
+                        <div class="media-box">
+                           <div class="pull-left">
+                              <em class="fa fa-tasks fa-2x text-success"></em>
+                           </div>
+                           <div class="media-box-body clearfix">
+                              <p class="m0">Pending Tasks</p>
+                              <p class="m0 text-muted">
+                                 <small>11 pending task</small>
+                              </p>
+                           </div>
+                        </div>
+                     </a>
+
+                     <a href="" class="list-group-item">
+                        <small translate="topbar.notification.MORE">更多</small>
+                        <span class="label label-danger pull-right">4</span>
+                     </a>
+                  </div>
+
+               </li>
+            </ul> -->
+
+         </li>
+
+          <!-- Fullscreen (only desktops)  visible-lg -->
+         <!-- <li>
+            <a href="" toggle-fullscreen="toggle-fullscreen">
+               <em class="fa fa-expand"></em>
+            </a>
+         </li> -->
+         <li dropdown="" class="dropdown dropdown-list">
+            <a dropdown-toggle="">
+               <em class="fa fa-user fa-lg"></em>
+               &nbsp;&nbsp;{{user_name}}
+            </a>
+
+            <ul class="dropdown-menu animated flipInX">
+               <li>
+                  <div class="list-group">
+
+                     <a  class="list-group-item" ng-click="goOut()">
+                        <div class="media-box">
+                           <div class="pull-left">
+                              <em class="fa fa-sign-out  text-success"></em>
+                           </div>
+                           <div class="media-box-body clearfix">
+                              <p class="m0">退出登录</p>
+                           </div>
+                        </div>
+                     </a>
+
+                  </div>
+
+               </li>
+            </ul>
+
+         </li>
+
+      </ul>
+      <!-- END Right Navbar-->
+   </div>
+   <!-- END Nav wrapper-->
+</nav>
+<!-- END Top Navbar

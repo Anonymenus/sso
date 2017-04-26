@@ -1,0 +1,55 @@
+<h3>修改资源</h3>
+<!-- START panel-->
+<div class="panel panel-default">
+   <div class="panel-heading">资源信息</div>
+   <div class="panel-body">
+      <form class="form-horizontal w5c-form" name="resourceForm" w5c-form-validate="validateOptions" novalidate>
+
+         <div class="form-group">
+            <label class="col-sm-2 control-label">资源名称</label>
+            <div class="col-sm-10">
+               <input type="text" name="name" ng-model="resource.name" class="form-control"  required/>
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-sm-2 control-label">资源码</label>
+            <div class="col-sm-10">
+               <input type="text"  name="code"  ng-model="resource.code" class="form-control" required/>
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-sm-2 control-label">url</label>
+            <div class="col-sm-10">
+               <input type="text"  name="url"  ng-model="resource.url" class="form-control" required/>
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-sm-2 control-label">描述</label>
+            <div class="col-sm-10">
+               <input type="text"  name="description"  ng-model="resource.description" class="form-control"/>
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-sm-2 control-label">应用</label>
+            <div class="col-sm-10">
+               <select ui-select2 class="form-control" ng-model="resource.appId" name="app" required>
+                  <option value="{{app.id}}" ng-repeat="app in allChlidApplications">{{app.appName}}</option>
+               </select>
+            </div>
+         </div>
+
+         <div class="clearfix">
+            <div class="pull-right">
+               <button class="btn btn-warning" w5c-form-submit="edit()" >修改</button>
+               <button class="btn btn-default" ng-click="goList()">取消</button>
+            </div>
+         </div>
+
+      </form>
+   </div>
+</div>
+<!-- END panel-->

@@ -1,0 +1,588 @@
+<h3>表单</h3>
+<!-- START panel-->
+<div class="panel panel-default">
+    <div class="panel-heading">表单元素</div>
+    <div class="panel-body">
+        <form class="form-horizontal w5c-form" w5c-form-validate="validateOptions" novalidate name="validateForm">
+            <fieldset>
+                <legend>输入框</legend>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">圆角输入框</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control form-control-rounded" />
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">带帮助的输入框</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" />
+                        <span class="help-block">提示性信息。。。。。。。。。。。。.</span>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="form-group">
+                    <label for="input-id-1" class="col-sm-2 control-label">标签焦点</label>
+                    <div class="col-sm-10">
+                        <input id="input-id-1" type="text" class="form-control" />
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">密码</label>
+                    <div class="col-sm-10">
+                        <input type="password" name="password" class="form-control" />
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Placeholder</label>
+                    <div class="col-sm-10">
+                        <input type="text" placeholder="placeholder" class="form-control" />
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Disabled</label>
+                    <div class="col-lg-10">
+                        <input type="text" placeholder="Disabled input here..." disabled="" class="form-control" />
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">无输入框</label>
+                    <div class="col-lg-10">
+                        <p class="form-control-static">email@example.com</p>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Checkboxes and radios</label>
+                    <div class="col-sm-10">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" />a</label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input id="optionsRadios1" type="radio" name="optionsRadios" value="option1" checked="" />b</label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input id="optionsRadios2" type="radio" name="optionsRadios" value="option2" />c</label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Inline checkboxes</label>
+                    <div class="col-sm-10">
+                        <label class="checkbox checkbox-inline">
+                            <input id="inlineCheckbox1" type="checkbox" value="option1" />a</label>
+                        <label class="checkbox-inline">
+                            <input id="inlineCheckbox2" type="checkbox" value="option2" />b</label>
+                        <label class="checkbox-inline">
+                            <input id="inlineCheckbox3" type="checkbox" value="option3" />c</label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="last-child">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Select</label>
+                    <div class="col-sm-10">
+                        <select name="account" class="form-control">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                            <option>Option 4</option>
+                        </select>
+                        <br/>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <select multiple="" class="form-control">
+                                    <option>Option 1</option>
+                                    <option>Option 2</option>
+                                    <option>Option 3</option>
+                                    <option>Option 4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Input variants</legend>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Custom Checkboxes &amp; Radios</label>
+                    <div class="col-sm-10">
+                        <div class="checkbox c-checkbox needsclick">
+                            <label class="needsclick">
+                                <input type="checkbox" value="" class="needsclick" />
+                                <span class="fa fa-check"></span>Option one</label>
+                        </div>
+                        <div class="checkbox c-checkbox">
+                            <label>
+                                <input type="checkbox" checked="" value="" />
+                                <span class="fa fa-check"></span>Option two checked</label>
+                        </div>
+                        <div class="checkbox c-checkbox">
+                            <label>
+                                <input type="checkbox" checked="" disabled="" value="" />
+                                <span class="fa fa-check"></span>Option three checked and disabled</label>
+                        </div>
+                        <div class="checkbox c-checkbox">
+                            <label>
+                                <input type="checkbox" disabled="" value="" />
+                                <span class="fa fa-check"></span>Option four disabled</label>
+                        </div>
+                        <div class="radio c-radio">
+                            <label>
+                                <input type="radio" name="a" value="option1" />
+                                <span class="fa fa-circle"></span>Option one</label>
+                        </div>
+                        <div class="radio c-radio">
+                            <label>
+                                <input type="radio" name="a" value="option2" checked="" />
+                                <span class="fa fa-circle"></span>Option two checked</label>
+                        </div>
+                        <div class="radio c-radio">
+                            <label>
+                                <input type="radio" value="option2" checked="" disabled="" />
+                                <span class="fa fa-circle"></span>Option three checked and disabled</label>
+                        </div>
+                        <div class="radio c-radio">
+                            <label>
+                                <input type="radio" name="a" disabled="" />
+                                <span class="fa fa-circle"></span>Option four disabled</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">
+                        Pure CSS radios
+                        <br/>(no font)</label>
+                    <div class="col-sm-10">
+                        <div class="radio c-radio c-radio-nofont">
+                            <label>
+                                <input type="radio" name="a" value="option1" />
+                                <span></span>Option one</label>
+                        </div>
+                        <div class="radio c-radio c-radio-nofont">
+                            <label>
+                                <input type="radio" name="a" value="option2" checked="" />
+                                <span></span>Option two checked</label>
+                        </div>
+                        <div class="radio c-radio c-radio-nofont">
+                            <label>
+                                <input type="radio" value="option2" checked="" disabled="" />
+                                <span></span>Option three checked and disabled</label>
+                        </div>
+                        <div class="radio c-radio c-radio-nofont">
+                            <label>
+                                <input type="radio" name="a" disabled="" />
+                                <span></span>Option four disabled</label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Inline checkboxes</label>
+                    <div class="col-sm-10">
+                        <label class="checkbox-inline c-checkbox">
+                            <input id="inlineCheckbox10" type="checkbox" value="option1" />
+                            <span class="fa fa-check"></span>a</label>
+                        <label class="checkbox-inline c-checkbox">
+                            <input id="inlineCheckbox20" type="checkbox" value="option2" />
+                            <span class="fa fa-check"></span>b</label>
+                        <label class="checkbox-inline c-checkbox">
+                            <input id="inlineCheckbox30" type="checkbox" value="option3" />
+                            <span class="fa fa-check"></span>c</label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Rounded</label>
+                    <div class="col-sm-10">
+                        <label class="checkbox c-checkbox c-checkbox-rounded">
+                            <input id="roundedcheckbox10" type="checkbox" checked="checked" />
+                            <span class="fa fa-check"></span>Lorem</label>
+                        <label class="checkbox c-checkbox c-checkbox-rounded">
+                            <input id="roundedcheckbox20" type="checkbox" />
+                            <span class="fa fa-check"></span>Ipsum</label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Inline radios</label>
+                    <div class="col-sm-10">
+                        <label class="radio-inline c-radio">
+                            <input id="inlineradio1" type="radio" name="i-radio" value="option1" checked="checked" />
+                            <span class="fa fa-circle"></span>a</label>
+                        <label class="radio-inline c-radio">
+                            <input id="inlineradio2" type="radio" name="i-radio" value="option2" />
+                            <span class="fa fa-circle"></span>b</label>
+                        <label class="radio-inline c-radio">
+                            <input id="inlineradio3" type="radio" name="i-radio" value="option3" />
+                            <span class="fa fa-circle"></span>c</label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Custom icons</label>
+                    <div class="col-sm-10">
+                        <label class="radio-inline c-radio">
+                            <input id="inlineradio10" type="radio" name="i-radio" value="option1" checked="checked" />
+                            <span class="fa fa-check"></span>a</label>
+                        <label class="radio-inline c-radio">
+                            <input id="inlineradio20" type="radio" name="i-radio" value="option2" checked="checked" />
+                            <span class="fa fa-user"></span>b</label>
+                        <label class="radio-inline c-radio">
+                            <input id="inlineradio30" type="radio" name="i-radio" value="option3" checked="checked" />
+                            <span class="fa fa-tint"></span>c</label>
+                        <br/>
+                        <label class="checkbox-inline c-checkbox">
+                            <input id="inlinecheckbox10" type="checkbox" value="option1" checked="checked" />
+                            <span class="fa fa-star"></span>a</label>
+                        <label class="checkbox-inline c-checkbox">
+                            <input id="inlinecheckbox20" type="checkbox" value="option2" checked="checked" />
+                            <span class="fa fa-heart"></span>b</label>
+                        <label class="checkbox-inline c-checkbox">
+                            <input id="inlinecheckbox30" type="checkbox" value="option3" checked="checked" />
+                            <span class="fa fa-bell"></span>c</label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="form-group has-success">
+                    <label class="col-sm-2 control-label">Input with success</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" />
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="form-group has-warning">
+                    <label class="col-sm-2 control-label">Input with warning</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" />
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="form-group has-error">
+                    <label class="col-sm-2 control-label">Input with error</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" />
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Control sizing</label>
+                    <div class="col-sm-10">
+                        <input type="text" placeholder=".input-lg" class="form-control input-lg" />
+                        <br/>
+                        <input type="text" placeholder="Default input" class="form-control" />
+                        <br/>
+                        <input type="text" placeholder=".input-sm" class="form-control input-sm" />
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Column sizing</label>
+                    <div class="col-sm-10">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <input type="text" placeholder=".col-md-2" class="form-control" />
+                            </div>
+                            <div class="col-md-3">
+                                <input type="text" placeholder=".col-md-3" class="form-control" />
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" placeholder=".col-md-4" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Input groups</label>
+                    <div class="col-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon">@</span>
+                            <input type="text" placeholder="Username" class="form-control" />
+                        </div>
+                        <br/>
+                        <div class="input-group">
+                            <input type="text" class="form-control" />
+                            <span class="input-group-addon">.00</span>
+                        </div>
+                        <br/>
+                        <div class="input-group">
+                            <span class="input-group-addon">$</span>
+                            <input type="text" class="form-control" />
+                            <span class="input-group-addon">.00</span>
+                        </div>
+                        <br/>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                        <input type="checkbox" />
+                     </span>
+                            <input type="text" class="form-control" />
+                        </div>
+                        <br/>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                        <input type="radio" />
+                     </span>
+                            <input type="text" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Button addons</label>
+                    <div class="col-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                        <button type="button" class="btn btn-default">Go!</button>
+                     </span>
+                            <input type="text" class="form-control" />
+                        </div>
+                        <br/>
+                        <div class="input-group">
+                            <input type="text" class="form-control" />
+                            <span class="input-group-btn">
+                        <button type="button" class="btn btn-default">Go!</button>
+                     </span>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">With dropdowns</label>
+                    <div class="col-sm-10">
+                        <div class="input-group">
+                            <div dropdown="" class="input-group-btn">
+                                <button type="button" dropdown-toggle="" class="btn btn-default">Action
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="">Action</a>
+                                    </li>
+                                    <li><a href="">Another action</a>
+                                    </li>
+                                    <li><a href="">Something else here</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li><a href="">Separated link</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <input type="text" class="form-control" />
+                        </div>
+                        <br/>
+                        <div class="input-group">
+                            <input type="text" class="form-control" />
+                            <div dropdown="" class="input-group-btn">
+                                <button type="button" dropdown-toggle="" class="btn btn-default">Action
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a href="">Action</a>
+                                    </li>
+                                    <li><a href="">Another action</a>
+                                    </li>
+                                    <li><a href="">Something else here</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li><a href="">Separated link</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Segmented</label>
+                    <div class="col-sm-10">
+                        <div class="input-group">
+                            <div dropdown="" class="input-group-btn">
+                                <button type="button" tabindex="-1" class="btn btn-default">Action</button>
+                                <button type="button" dropdown-toggle="" class="btn btn-default">
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="">Action</a>
+                                    </li>
+                                    <li><a href="">Another action</a>
+                                    </li>
+                                    <li><a href="">Something else here</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li><a href="">Separated link</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <input type="text" class="form-control" />
+                        </div>
+                        <br/>
+                        <div class="input-group">
+                            <input type="text" class="form-control" />
+                            <div dropdown="" class="input-group-btn">
+                                <button type="button" tabindex="-1" class="btn btn-default">Action</button>
+                                <button type="button" dropdown-toggle="" class="btn btn-default">
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a href="">Action</a>
+                                    </li>
+                                    <li><a href="">Another action</a>
+                                    </li>
+                                    <li><a href="">Something else here</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li><a href="">Separated link</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+            <div class="form-group">
+                    <label class="col-sm-2 control-label">圆角输入框</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control form-control-rounded" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">邮箱</label>
+                    <div class="col-sm-10">
+                        <input type="email" name="email" ng-model="entity.email" required="" class="form-control" placeholder="输入邮箱">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">用户名</label>
+                    <div class="col-sm-10">
+                        <input required="" ng-pattern="/^[A-Za-z]{1}[0-9A-Za-z_]{1,19}$/" ng-model="entity.name" w5c-unique-check="{url:'http://www.ngnice.com/api/test/user/name/check?name='+entity.name}" class="form-control" name="username" placeholder="输入用户名（输入why520crazy验证存在）">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">密码</label>
+                    <div class="col-sm-10">
+                        <input type="password" required="" ng-model="entity.password" name="password" class="form-control" ng-minlength="5" ng-maxlength="15" placeholder="输入密码">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">重复密码</label>
+                    <div class="col-sm-10">
+                        <input type="password" required="" w5c-repeat="password" ng-model="entity.repeatPassword" name="repeatPassword" class="form-control" placeholder="重复密码">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">数字</label>
+                    <div class="col-sm-10">
+                        <input type="number" required="" ng-model="entity.number" name="number" class="form-control" placeholder="输入数字（10-15）" max="15" min="10">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">自定义验证</label>
+                    <div class="col-sm-10">
+                        <!--associate 为关联元素，即关联元素发生变化时触发此处验证-->
+                        <input type="number" w5c-customizer="customizer()" associate="number" ng-model="entity.customizer" name="customizer" class="form-control" placeholder="数字必须大于上面输入的数字">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">URL</label>
+                    <div class="col-sm-10">
+                        <input type="url" required="" ng-model="entity.url" name="url" class="form-control" placeholder="输入URL">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">禁用属性</label>
+                    <div class="col-sm-10">
+                        <input type="url" disabled="" ng-model="entity.disabled" name="disabled" class="form-control" placeholder="该属性已经禁用">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">类型</label>
+                    <div class="col-sm-10">
+                        <select class="form-control" ng-model="entity.type" required name="type" ng-options="type.text for type in types">
+                            <option value="">---请选择---</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">多选框</label>
+                    <div class="col-sm-10">
+                        <select multiple class="form-control" ng-model="entity.multipleType" required name="multipleType" ng-options="type.text for type in types">
+                            <option value="">---请选择---</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">动态 Name</label>
+                    <div class="col-sm-10">
+                        <input required="" class="form-control" ng-model="entity.dynamicName" w5c-dynamic-name="dynamicName" placeholder="动态 Name">
+                    </div>
+                </div>
+                <div class="form-group" ng-if="showDynamicElement">
+                    <label class="col-sm-2 control-label">动态元素</label>
+                    <div class="col-sm-10">
+                        <input required="" class="form-control" w5c-dynamic-element ng-model="entity.dynamic" name="dynamic$123$" placeholder="动态现实元素(name = {name1}${数字}$, 以 {name1}的形式找错误提示信息)">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2">是否可用</label>
+                    <div class="col-sm-10">
+                        <label class="radio-inline">
+                            <input type="radio" ng-model="entity.isAvailable" value="Y" ng-checked="true"> 可用
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" ng-model="entity.isAvailable" value="N"> 不可用
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group" ng-show="validateForm.$errors.length > 0 && showErrorType == 2">
+                    <label class="col-sm-2 control-label"></label>
+                    <div class="col-sm-10">
+                        <div class="alert alert-danger">
+                            <ui>
+                                <li ng-repeat="error in validateForm.$errors track by $index">
+                                    {{error}}
+                                </li>
+                            </ui>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="clearfix">
+               <div class="pull-right">
+               <button class="btn btn-warning" w5c-form-submit="saveEntity()">新增</button>
+               <button class="btn btn-default">取消</button></div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- END panel-->

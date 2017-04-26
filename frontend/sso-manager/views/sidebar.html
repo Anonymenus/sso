@@ -1,0 +1,26 @@
+<!-- Inline template with sidebar items markup and ng-directives-->
+<script type="text/ng-template" id="sidebar-renderer.html">
+   <a  ng-href="{{$state.href(item.sref, item.params)}}" >
+   <em ng-if="item.icon" class="{{item.icon}}"></em>
+   <span>{{item.name}}</span><em ng-if="item.submenu && item.submenu!= null"  class="fa fa-sort-desc pull-right" collapse="isCollapse(pIndex)"></em>
+   </a>
+   <ul ng-if="item.submenu" collapse="isCollapse(pIndex)" ng-init="addCollapse(pIndex, item)" class="nav sidebar-subnav">
+  <li class="sidebar-subnav-header">{{item.name}}</li>
+   <li ng-repeat="item in item.submenu" ng-include="'sidebar-renderer.html'" ng-class="getMenuItemPropClasses(item)" ng-init="pIndex=(pIndex+'-'+$index); inSubmenu = true" ng-click="toggleCollapse(pIndex)"></li>
+   </ul>
+</script>
+<!-- START Sidebar (left)-->
+<div class="aside-inner">
+   <nav sidebar="" sidebar-anyclick-close="" class="sidebar">
+      <!-- START sidebar nav-->
+      <ul class="nav">
+         <!-- START user info-->
+
+         <!-- END user info-->
+         <!-- Iterates over all sidebar items-->
+         <li ng-class="getMenuItemPropClasses(item)" ng-repeat="item in menuItems" ng-init="pIndex = $index" ng-include="'sidebar-renderer.html'" ng-click="toggleCollapse(pIndex, true)"></li>
+      </ul>
+      <!-- END sidebar nav-->
+   </nav>
+</div>
+<!-- END Sidebar (left)-->

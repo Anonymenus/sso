@@ -1,0 +1,46 @@
+[{
+  "name": "系统管理",
+  "icon": "fa fa-tachometer",
+  "sref": "#",
+  "submenu": [{
+    "name": "后台用户",
+    "sref": "sso.managerAccount"
+  }, {
+    "name": "应用管理",
+    "sref": "sso.application"
+  }]
+}, {
+  "name": "机构管理",
+  "icon": "fa fa-institution",
+  "sref": "#",
+  "submenu": [{
+    "name": "机构管理",
+    "sref": "sso.organization"
+  }]
+}, {
+  "name": "账号和员工管理",
+  "icon": "fa fa-users",
+  "sref": "#",
+  "submenu": [{
+    "name": "账号",
+    "sref": "sso.account"
+  }, {
+    "name": "员工",
+    "sref": "sso.employee"
+  }]
+}, {
+  "name": "资源管理",
+  "icon": "fa fa-folder",
+  "sref": "sso.resource",
+  "submenu": [{
+    "name": "菜单管理",
+    "sref": "sso.menu"
+  },{
+    "name": "功能模块管理",
+    "sref": "sso.functionModule"
+  }]
+}, {
+  "name": "角色管1理",
+  "icon": "fa fa-user",
+  "sref": "sso.role"
+}]

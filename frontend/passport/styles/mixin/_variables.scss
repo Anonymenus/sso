@@ -1,0 +1,132 @@
+@charset "UTF-8";
+//-----------------------------------------------------
+// setting scss
+//-----------------------------------------------------
+
+
+// 开关设置
+//-----------------------------------------------------
+$lte7:                  true !default; //是否兼容ie6-7
+$filter:                false !default; //是否为ie6-8开启css3滤镜兼容，常用于渐变背景
+$printStyleSwitch:      false !default; //是否开启打印样式
+
+
+// font相关
+//-----------------------------------------------------
+$baseFontSize:          14px !default;
+$middleFontSize:        16px !default;
+$bigFontSize:           18px !default;
+$smallFontSize:         12px !default;
+$bigerFontSize:         24px !default;
+$baseLineHeight:        1.5 !default;
+$baseFontFamily:        "Helvetica Neue", Helvetica, Tahoma, sans-serif !default;
+$fontCn:                "SimSun"; //宋体
+$fontYaHei:             "Microsoft Yahei"; //微软雅黑
+$fontHeiTi:             "SimHei"; //黑体
+
+
+// 元素上下间距
+//-----------------------------------------------------
+$baseGap:               20px !default;
+
+
+// 基本颜色
+// color function : http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
+// lighten($color, $amount)
+// darken($color, $amount)
+// opacify($color, $amount)
+// mix($color1, $color2[, $amount])
+//-----------------------------------------------------
+$black:                 #000 !default;
+$grayDarker:            #333 !default;
+$grayDark:              #515460 !default;
+$gray:                  #d6d6d6 !default;
+$grayLight:             #ccc !default;
+$grayLighter:           #e6e6e6 !default;
+$grayLightest:          #f5f5f5 !default;
+$white:                 #fff !default;
+
+$red:                   #E74C3C !default;
+$redLight:              #f36b50 !default;
+$blue:                  #3499da !default;
+$blueDarker:            #4285a7 !default;
+$blueLight:             #2BB9FB !default;
+$blueDark:              #0064cd !default;
+$orange:                #f2a050 !default;
+$orangeDark:            #f60    !default;
+$green:                 #1fb5ad !default;
+$greeDark:              #1f938b !default;
+$greenLight:            #44cdc4 !default;
+$yellow:                #ffc40d !default;
+$pink:                  #c3325f !default;
+$purple:                #7a43b6 !default;
+
+$primary:               #0078E7 !default;//主色
+$rose:                  #f83555 !default;
+
+//** Background color for `<body>`.
+$body-bg:               #fff !default;
+
+//** Background color for `nav`.
+$head-bg:              #f8f8f8 !default;
+
+//** Background color for `container`.
+$container:            #eeeeee !default;
+
+
+// link
+//-----------------------------------------------------
+// 如果只有一个值则滑过的值为这个值的darken 5%，如果
+// 有两个值则第二个值为滑过的值
+$linkColor:             #08c !default;
+
+
+// scaffolding
+//-----------------------------------------------------
+$bodyBgColor:           $white !default;
+$textColor:             $grayDarker !default;
+
+
+// placeholder
+//-----------------------------------------------------
+// 变量分别为：是否输出表单的占位符placeholder样式，文本色
+$placeholder:           true $gray !default;
+
+
+// 交互配色
+// 警告，错误，成功，提示
+//-----------------------------------------------------
+// 每个变量都有三个颜色值，分别为：文本色，背景色，边框色
+$warningColor:               #514721 #FFF6BF #FFD324 !default;
+$errorColor:                 #8A1F11 #FBE3E4 #FBC2C4 !default;
+$successColor:               #264409 #E6EFC2 #C6D880 !default;
+$infoColor:                  #205791 #D5EDF8 #92CAE4 !default;
+
+
+// radius
+//-----------------------------------------------------
+$baseRadius:            5px !default;
+$smallRadius:           3px !default;
+
+//btn
+//-----------------------------------------------------
+$btn-font-weight:                normal !default;
+
+$btn-default-color:              #969191 !default;
+$btn-default-bg:                 #e6e6e6 !default;
+$btn-default-border:             #dbdcdd !default;
+
+$btn-default-color-focus:        #fff !default;
+$btn-default-bg-focus:           #337ab7 !default;
+$btn-default-border-focus:       #2e6da4 !default;
+
+$btn-warning-color:              #f48542 !default;
+$btn-warning-hover-color:        #e77d3d !default;
+// z-index
+//-----------------------------------------------------
+$zindexDropdown:        1000 !default;
+$zindexFixedTopbar:     1010 !default;
+$zindexTooltip:         1020 !default;
+$zindexAlert:           1030 !default;
+$zindexModal:           1100 !default;
+$brand-info:    #30a8e2 !default;

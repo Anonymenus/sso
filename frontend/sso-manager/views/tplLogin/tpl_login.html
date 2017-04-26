@@ -1,0 +1,85 @@
+<div  class="block-center mt-xl wd-xl">
+   <div class="panel panel-dark panel-flat">
+      <div class="panel-heading text-center">
+         <a href="#">
+         </a>
+      </div>
+      <div class="panel-body">
+         <p class="text-center pv">登录</p>
+         <form role="form" ng-submit="login()" name="login.loginForm" novalidate="" class="form-validate mb-lg">
+            <div class="form-group has-feedback">
+               <input type="text" name="loginName" placeholder="Enter name" required="" class="form-control" ng-model="account.loginName"/>
+            </div>
+            <div class="form-group has-feedback">
+               <input type="password" name="password" placeholder="Password" ng-model="account.password" required="" class="form-control" />
+            </div>
+
+            <button type="button" class="btn btn-block btn-primary mt-lg"  ng-click="login()">登录</button>
+         </form>
+      </div>
+   </div>
+</div>
+<!-- <div class="login-container">
+    <div class="center-bg-mask"></div>
+    <div class="container">
+        <div class="login">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="login-logo-title">
+                        <img src="./images/login_logo.png">
+                        <p>通行证</p>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="card">
+                        <div class="content">
+                            <div class="login-title clearfix">
+                                <h4 class="pull-left">欢迎登录</h4>
+                                   <a class="pull-right" href="javaScript:void(0);" ng-click="goRegister()">立即注册>></a>
+                            </div>
+                            <div class="alert alert-warning" ng-if="showError" id="loginErrorMsg">
+                                <span class="fa fa-volume-up"></span>
+                                <span style="color: red;margin-left: 10px;font-size:12px; ">账户名和密码输入不匹配，请重新输入</span>
+                            </div>
+                            <div class="error text-center" style="padding-bottom: 10px;color:red;display: none">
+                                <small></small>
+                            </div>
+                            <form class="form-horizontal w5c-form" w5c-form-validate="validateOptions" novalidate name="userForm">
+                                <div class="form-group has-feedback has-input-group" ng-class="{'has-success' : !userForm.loginName.$pristine && userForm.loginName.$valid,'has-error' : !userForm.loginName.$pristine && userForm.loginName.$invalid }">
+                                    <div class="col-sm-12">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"> <em class="fa fa-user fa-2x"></em>
+                                                </span>
+                                            <input class="form-control" name="loginName" placeholder="登录名" type="text" ng-model="account.loginName" required>
+                                        </div>
+                                        <span class="fa fa-check form-control-feedback" ng-show="!userForm.loginName.$pristine && userForm.loginName.$valid"></span>
+                                        <span class="fa fa-close form-control-feedback" ng-show="!userForm.loginName.$pristine && userForm.loginName.$invalid"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback has-input-group" ng-class="{'has-success' : userForm.password.$dirty && userForm.password.$valid,'has-error' : userForm.password.$dirty && userForm.password.$invalid }">
+                                    <div class="col-sm-12">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"> <em class="fa fa-lock fa-2x"></em>
+                                                </span>
+                                            <input class="form-control" name="password" placeholder="密码" type="password" ng-model="account.password" required>
+                                        </div>
+                                        <span class="fa fa-check form-control-feedback" ng-show="userForm.password.$dirty && userForm.password.$valid"></span>
+                                        <span class="fa fa-close form-control-feedback" ng-show="userForm.password.$dirty && userForm.password.$invalid"></span>
+                                    </div>
+                                </div>
+                                <div class="check-f">
+                                    <input style="margin-right: 10px" type="checkbox">记住账户名</div>
+                                <button w5c-form-submit="login()" class="btn btn-warning btn-lg" style="width: 100%" kd-loading-button="isProcessing" data-loading-text="登录中...">登录</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="login-footer">
+    <div class="container">
+        <div class="info">云顶科技（江苏）有限公司 2014-2016 Copyright</div>
+    </div>
+</div> -->

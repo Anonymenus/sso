@@ -1,0 +1,35 @@
+<h3>菜单管理</h3>
+<div class="d-table-fixed">
+    <div class="d-cell wd-md code-files">
+        <div kd-loading="loadingTree" kd-loading-options="{text: '加载中...'}">
+            <div id="tree-menu" style="background: #EAEDF1">
+                <div class="left-tree"  style="overflow: auto;position:fixed">
+                    <ul id="ztree" class="ztree"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-cell">
+        <div class="d-table">
+            <div class="d-row">
+                <div class="d-cell-wrapper">
+                    <div class="d-cell-inner">
+                            <div class="container-fluid">
+                                <h4 class=" clearfix">
+                                    <div class="pull-left"><button type="button" class="btn btn-warning" ng-click="add()">新增</button></div>
+                                    <div class="pull-right">
+
+                                    </div>
+                                </h4>
+                                <div kd-loading="loading" kd-loading-options="{text: '加载中...'}">
+                                    <div id="uigrid-demo" ui-grid="gridOptions" ui-grid-pagination ui-grid-auto-resize ui-grid-resize-columns elheightresize  class="table-uigrid"></div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

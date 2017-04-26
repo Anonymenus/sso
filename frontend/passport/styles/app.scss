@@ -1,0 +1,19 @@
+/**
+ * Author: dongwenzhao/kingdee
+ * Date: 16/11/24
+ * Time: 上午8:46
+ *  登录页面   === >>> 依赖文件说明
+ *   _variable.scss     变量
+ *   _css3.scss  css3  前缀
+ *    _mixin.scss       混合变量
+ */
+@charset "UTF-8";
+@import "bootstrap.min";
+@import "mixin/_variables";
+@import "mixin/_css3";
+@import "mixin/_mixin";
+@import "app/ieAlert";
+@import "app/login";
+@import "app/forgetPass";
+
+

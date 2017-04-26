@@ -1,0 +1,250 @@
+ .container {
+     .pass {
+         padding-top: 40px;
+         h3 {
+             font-size: $middleFontSize;
+             color: $grayDarker;
+             margin-top: 0px;
+         }
+         ul {
+             list-style: none;
+             text-align: center;
+             li {
+                 display: inline-block;
+                 padding: 4px 66px 4px 70px;
+                 background-color: #c3c3c3;
+                 position: relative;
+                 color: #fff;
+             }
+         }
+         .step-header {
+             ul {
+                 >li {
+                     &:before {
+                         content: '';
+                         width: 0px;
+                         height: 0px;
+                         border-top: 18px solid transparent;
+                         border-left: 14px solid #fff;
+                         border-bottom: 18px solid transparent;
+                         position: absolute;
+                         top: 0px;
+                         right: -17px;
+                         z-index: 10
+                     }
+                     &:after {
+                         content: '';
+                         width: 0px;
+                         height: 0px;
+                         border-top: 18px solid transparent;
+                         border-left: 14px solid #c3c3c3;
+                         border-bottom: 18px solid transparent;
+                         position: absolute;
+                         top: 0px;
+                         right: -14px;
+                         z-index: 11
+                     }
+                     >label {
+                         width: 24px;
+                         height: 24px;
+                         border-radius: 50%;
+                         background-color: $white;
+                         font-size: $middleFontSize;
+                         color: #c3c3c3;
+                         line-height: 24px;
+                         text-align: center
+                     }
+                     >b {
+                         letter-spacing: 2px;
+                         margin-left: 4px;
+                     }
+                     &.active {
+                         background-color: #65c5b3;
+                         &:after {
+                             border-left: 14px solid #65c5b3
+                         }
+                         >label {
+                             color: #65c5b3
+                         }
+                     }
+                 }
+             }
+         }
+         .step-body {
+             background-color: #fafafa;
+             padding-top: 46px;
+             padding-bottom: 58px;
+             margin-bottom: 55px;
+             .form-horizontal {
+                 width: 420px;
+                 margin: auto;
+                 label {
+                     width: 78px;
+                     text-align: right;
+                     font-size: 14px;
+                     color: #4c4c4c;
+                     font-weight: bold;
+                 }
+                 .form-group {
+                     margin: 0px;
+                     margin-bottom: 32px;
+                     .tooltip {
+                         top: 0px;
+                         left: 660px;
+                         @include opacity(100) .tooltip-arrow,
+                         .tooltip-inner {
+                             border-right-color: #e5e5e5;
+                             background: #e5e5e5;
+                             color: #4c4c4c;
+                         }
+                         .tooltip-arrow {
+                             background: none
+                         }
+                         .tooltip-inner {
+                             max-width: 270px;
+                             text-align: left
+                         }
+                     }
+                 }
+             }
+         }
+     }
+ }
+
+ .init-status-2,
+ .status-3 {
+     position: relative
+ }
+
+ .init-status-2 {
+     .form-horizontal {
+         .form-group.has-error {
+             margin: 0px;
+             margin-bottom: 12px
+         }
+     }
+ }
+
+ .P48 {
+     padding-left: 80px
+ }
+
+ .P360 {
+     padding-left: 400px
+ }
+
+ .w122 {
+     width: 122px
+ }
+
+ #sendCodeBtn {
+     background-color: #65c5b3;
+     color: #fff
+ }
+
+ .has-input-group .input-group {
+     position: relative
+ }
+
+ .has-input-group .input-group .w5c-error {
+     position: absolute;
+     top: 35px;
+     padding-left: 0px
+ }
+
+ .init-status-3 .deposit-success,
+ .status-4 .deposit-success {
+     height: 170px;
+     text-align:center;
+ }
+
+ .init-status-3 .deposit-success em,
+ .init-status-3 .deposit-success p,
+ .status-4 .deposit-success em,
+ .status-4 .deposit-success p {
+     display: inline-block
+ }
+
+ .init-status-3 .deposit-success em,
+ .status-4 .deposit-success em {
+     background: #65c5b3;
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     line-height: 50px;
+     text-align: center;
+     color: #fff;
+     font-size: 20px
+ }
+
+ .init-status-3 .deposit-success p,
+ .status-4 .deposit-success p {
+     color: #4c4c4c;
+     font-size: 18px;
+     text-align: center;
+     padding-top: 70px
+ }
+
+ .w5c-form .w5c-error {
+     color: #b94a48;
+     display: block;
+     margin-top: 5px;
+     padding-left: 68px;
+ }
+
+ .w5c-form input:focus:focus,
+ .w5c-form textarea:focus:focus,
+ .w5c-form select:focus:focus {
+     border-color: rgba(82, 168, 236, 0.8);
+     outline: 0;
+     outline: thin dotted \9;
+     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+     color: #000000
+ }
+
+ .w5c-form input:focus:focus.error,
+ .w5c-form textarea:focus:focus.error,
+ .w5c-form select:focus:focus.error {
+     border-color: #b94a48;
+     -webkit-box-shadow: 0 0 6px #f8b9b7;
+     -moz-box-shadow: 0 0 6px #f8b9b7;
+     box-shadow: 0 0 6px #f8b9b7
+ }
+
+ .w5c-form input.error,
+ .w5c-form textarea.error,
+ .w5c-form select.error {
+     border-color: #b94a48;
+     -webkit-box-shadow: 0 0 6px #f8b9b7;
+     -moz-box-shadow: 0 0 6px #f8b9b7;
+     box-shadow: 0 0 6px #f8b9b7
+ }
+
+ .w5c-form .dropdown-menu {
+     max-height: 400px;
+     overflow-y: auto
+ }
+
+ .w5c-form .alert {
+     margin-bottom: 0px
+ }
+
+ .w5c-form .w5c-error {
+     color: #b94a48;
+     display: block;
+     margin-top: 5px;
+     padding-left: 80px
+ }
+
+ .btn-save {
+     background: #65c5b3;
+     color: #fff;
+     &:hover,&:active,&:focus{
+        @extend .btn-save
+     }
+ }
+
+ a.oranger{
+    color:$orange;
+ }

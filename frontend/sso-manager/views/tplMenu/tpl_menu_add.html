@@ -1,0 +1,94 @@
+<h3>新增资源</h3>
+<!-- START panel-->
+<div class="panel panel-default">
+   <div class="panel-heading">菜单新增</div>
+   <div class="panel-body">
+      <form class="form-horizontal w5c-form" name="resourceForm" w5c-form-validate="validateOptions" novalidate>
+
+         <div class="form-group">
+            <label class="col-sm-2 control-label">菜单名称</label>
+            <div class="col-sm-10">
+               <input type="text" name="name" ng-model="menu.name" class="form-control"  required/>
+            </div>
+         </div>
+         <div class="form-group">
+            <label class="col-sm-2 control-label">菜单url</label>
+            <div class="col-sm-10">
+               <input type="text"  name="url"  ng-model="menu.url" class="form-control" required/>
+            </div>
+         </div>
+          <div class="form-group">
+              <label class="col-sm-2 control-label">菜单类别</label>
+              <div class="col-sm-10">
+                  <select class="form-control" ng-model="menu.menuCategory" name="style" ui-select2="{minimumResultsForSearch: -1}" data-placeholder="请选择"  >
+                      <option value={{orgType.code}} ng-repeat="orgType in organizationTypeList">{{orgType.name}}</option>
+                  </select>
+              </div>
+          </div>
+
+          <div class="form-group">
+              <label class="col-sm-2 control-label">菜单类型</label>
+              <div class="col-sm-10">
+                  <select class="form-control" ng-model="menu.menuType" name="style" ui-select2="{minimumResultsForSearch: -1}" data-placeholder="请选择"  required>
+                      <option value="0">菜单</option>
+                      <option value="1">功能点</option>
+                  </select>
+              </div>
+          </div>
+
+          <div class="form-group">
+              <label class="col-sm-2 control-label">菜单样式</label>
+              <div class="col-sm-10">
+                  <input type="text"  name="menuClass"  ng-model="menu.menuClass" class="form-control" required/>
+              </div>
+          </div>
+
+          <div class="form-group">
+              <label class="col-sm-2 control-label">菜单参数</label>
+              <div class="col-sm-10">
+                  <input type="text"  name="params"  ng-model="menu.params" class="form-control" required/>
+              </div>
+          </div>
+
+          <div class="form-group">
+              <label class="col-sm-2 control-label">菜单排序</label>
+              <div class="col-sm-10">
+                  <input type="text"  name="sort"  ng-model="menu.sort" class="form-control" required/>
+              </div>
+          </div>
+
+
+         <div class="form-group">
+            <label class="col-sm-2 control-label">父级菜单</label>
+            <div class="col-sm-10">
+               <input type="text"  name="parentMenuame"  ng-model="parentMenu.name" class="form-control" required readonly/>
+                <input type="hidden"  name="parentId"  ng-model="menu.parentId" class="form-control" required/>
+            </div>
+         </div>
+
+          <div class="form-group">
+              <label class="col-sm-2 control-label">应用Key</label>
+              <div class="col-sm-10">
+                  <input type="text"  name="appKey"  ng-model="menu.appKey" class="form-control" required  readonly/>
+              </div>
+          </div>
+
+          <div class="form-group">
+              <label class="col-sm-2 control-label">应用类型</label>
+              <div class="col-sm-10">
+                  <input type="text"  name="appType"  ng-model="menu.appType" class="form-control" required  readonly/>
+              </div>
+          </div>
+
+
+         <div class="clearfix">
+            <div class="pull-right">
+               <button class="btn btn-warning" w5c-form-submit="saveMenu()" >新增</button>
+               <button class="btn btn-default" ng-click="goList()">取消</button>
+            </div>
+         </div>
+
+      </form>
+   </div>
+</div>
+<!-- END panel-->

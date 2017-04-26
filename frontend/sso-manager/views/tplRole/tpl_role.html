@@ -1,0 +1,56 @@
+<h3>角色</h3>
+<div class="container-fluid">
+    <!--   <h4 class=" clearfix">
+    <div class="pull-left">
+      <button type="button" class="btn btn-warning" ng-click="add()">新增</button>
+    </div>
+    <div class="pull-right">
+      <div class="search" style="right:200px;">
+        <div class="input-group">
+          <input type="text" ng-model="name" class="form-control"  placeholder="请输入角色名">
+          <div class="input-group-addon" ng-click="onSelectPage(1)"> <em class="fa fa-search"></em>
+          </div>
+        </div>
+      </div>
+    </div>
+  </h4> -->
+    <form class="form-horizontal contentModalSearch" novalidate ng-show="!expand">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                        <div class="form-group">
+                            <label class="control-label  col-sm-3 col-md-3 clo-lg-3">户号</label>
+                            <div class="col-sm-8 col-md-8 col-lg-8">
+                                <input type="text" ng-model="roomCode" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                        <div class="form-group">
+                            <label class="control-label  col-sm-3 col-md-3 clo-lg-3">用户类型</label>
+                            <div class="col-sm-8 col-md-8 col-lg-8">
+                                <select class="form-control" ng-model="customerTypeId" name="style" ui-select2="{minimumResultsForSearch: -1}" data-placeholder="请选择" ng-init="style= options[1]" required>
+                                    <option value="">--请选择--</option>
+                                    <option ng-repeat="ct in customerTypes" value="{{ct.id}}"> {{ct.name}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                        <div class="form-group">
+                            <label class="control-label  col-sm-3 col-md-3 clo-lg-3">联系方式</label>
+                            <div class="col-sm-8 col-md-8 col-lg-8">
+                                <input type="text" ng-model="phone" class="form-control">
+                            </div>
+                            <div class="col-sm-1 col-md-1 col-lg-1  noPadding searchBtn">
+                                <button ng-click="onSelectPage(1)" class="btn btn-warning"><em class="fa fa-search"></em></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </form>
+    <div kd-loading="loading" kd-loading-options="{text: '加载中...'}">
+        <div id="uigrid-demo" ui-grid="gridOptions" ui-grid-pagination ui-grid-auto-resize ui-grid-resize-columns elheightresize class="table-uigrid"></div>
+    </div>
+</div>

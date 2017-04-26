@@ -1,0 +1,114 @@
+
+.goal-thermometer{
+    position:relative;
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#fff;
+    font-weight: bold;
+    opacity:1;
+}
+
+.therm-numbers{
+    width:50px;
+    float:left;
+    opacity:.4;
+}
+
+.therm-number{
+    position:absolute;
+    text-align:right;
+    font-size:13px;
+}
+
+.therm-graphics{
+    float:left;
+    position:relative;
+    margin-top: 28px;
+    left: 50%;
+    margin-left: -85px;
+}
+
+.therm-top{
+    position:absolute;
+    left:-2px;
+    width:164px;
+    height:49px;
+    top:-36px;
+}
+
+.therm-body-bg{
+     position:absolute;
+     width:156px;
+     height: 7px;
+     left: 0px;
+     bottom:0px;
+}    
+
+.therm-body-mercury{
+     position:absolute;
+     bottom:-25px;
+     width: 156px;
+     height:0px;
+     z-index: 9;
+     left: 0;
+}
+
+.therm-body-fore{
+     position:absolute;
+     width:160px;
+     top:13px;
+     left:0px;
+     background-repeat:no-repeat;
+     overflow: hidden;
+}
+
+.therm-bottom{
+    position:absolute;
+    left:0;
+    width:160px;
+    height:20px;
+    z-index: 9;
+} 
+
+.therm-tooltip{
+    position:absolute;
+    right:28px;
+    width:80px;
+    display:none;
+}
+
+.therm-tooltip .tip-left{
+    float:left;
+    width:19px;
+    height:32px;
+}
+
+.therm-tooltip .tip-middle{
+    float:left;
+    height:32px;
+    font-size:15px;
+}
+
+.therm-tooltip .tip-middle p{
+    position:relative;
+    margin:0;
+    padding-right:4px;
+    padding-left:3px;
+    top:6px;
+    height:32px;
+    opacity:.7;
+    background-size:64px 64px;
+    -moz-background-size: 100%;
+}
+
+#therm-tooltip .tip-right{
+    float:left;
+    width:9px;
+    height:32px;
+}
+
+.clear {
+    clear: both;
+}
+
+>>>>>>> Stashed changes

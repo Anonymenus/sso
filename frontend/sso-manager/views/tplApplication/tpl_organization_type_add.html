@@ -1,0 +1,28 @@
+<h3>新增机构类型</h3>
+<!-- START panel-->
+<div class="panel panel-default">
+    <div class="panel-heading">机构类型</div>
+    <div class="panel-body">
+        <form class="form-horizontal w5c-form" w5c-form-validate="validateOptions" novalidate name="validateForm">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">类型code</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" ng-model="orgType.code"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">类型名称</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" ng-model="orgType.name"/>
+                </div>
+            </div>
+
+            <div class="clearfix">
+               <div class="pull-right">
+               <button class="btn btn-warning" w5c-form-submit="save()">确定</button>
+               <button class="btn btn-default" ng-click="back()">取消</button></div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- END panel-->

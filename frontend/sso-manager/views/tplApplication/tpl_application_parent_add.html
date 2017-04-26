@@ -1,0 +1,40 @@
+<h3>新增应用</h3>
+<!-- START panel-->
+<div class="panel panel-default">
+   <div class="panel-heading">应用信息</div>
+   <div class="panel-body">
+      <form class="form-horizontal w5c-form" name="managerAccountForm" w5c-form-validate="validateOptions" novalidate>
+
+         <div class="form-group">
+            <label class="col-sm-2 control-label">应用名称</label>
+            <div class="col-sm-10">
+               <input type="text" name="appName" ng-model="applicationParent.appName" class="form-control"  required/>
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-sm-2 control-label">应用地址</label>
+            <div class="col-sm-10">
+               <input type="text" name="appUrl" ng-model="applicationParent.appUrl" class="form-control"  required/>
+            </div>
+         </div>
+
+
+         <div class="form-group">
+            <label class="col-sm-2 control-label">备注</label>
+            <div class="col-sm-10">
+               <textarea name="remark" ng-model="applicationParent.remark" class="form-control" rows="3" cols="20"></textarea>
+            </div>
+         </div>
+
+         <div class="clearfix">
+            <div class="pull-right">
+               <button class="btn btn-warning" w5c-form-submit="save()" >保存</button>
+               <button class="btn btn-default" ng-click="goList()">取消</button>
+            </div>
+         </div>
+
+      </form>
+   </div>
+</div>
+<!-- END panel-->

@@ -1,0 +1,6 @@
+<div ng-include="'views/head.html'" ng-controller="HeadController" class="topnavbar-wrapper">
+</div>
+<aside ng-include="'views/sidebar.html'" ng-controller="SidebarController" class="aside"></aside>
+<section>
+    <div ui-view="" autoscroll="false" ng-class="app.viewAnimation" class="content-wrapper"></div>
+</section>
